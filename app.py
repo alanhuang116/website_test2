@@ -305,7 +305,7 @@ with col1:
             show_samples=show_samples,
             opacity=interpolation_opacity
         )
-        st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': True})
+        st.plotly_chart(fig, width='stretch', config={'displayModeBar': True})
     else:
         # Fallback to scatter map
         st.warning("⚠️ Not enough points for interpolation. Showing sample locations only.")
@@ -313,7 +313,7 @@ with col1:
             sample_data=agg_data,
             compound_name=selected_compound
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
 with col2:
     st.markdown("### 📊 Statistics")
@@ -333,7 +333,7 @@ with col2:
     # Distribution plot
     st.markdown("#### Distribution")
     dist_fig = create_distribution_plot(filtered_data, selected_compound)
-    st.plotly_chart(dist_fig, use_container_width=True)
+    st.plotly_chart(dist_fig, width='stretch')
 
 # Bottom section - Additional visualizations
 st.markdown("---")
@@ -344,7 +344,7 @@ with tab1:
     st.markdown("### Temporal Trends")
     if len(rounds) > 1:
         time_fig = create_time_series_plot(filtered_data, selected_compound, group_by='Round')
-        st.plotly_chart(time_fig, use_container_width=True)
+        st.plotly_chart(time_fig, width='stretch')
     else:
         st.info("Time series requires multiple measurement rounds. Please select more rounds in the filters.")
 
@@ -392,7 +392,7 @@ with tab2:
                         show_samples=False,
                         opacity=interpolation_opacity
                     )
-                    st.plotly_chart(fig_comp, use_container_width=True)
+                    st.plotly_chart(fig_comp, width='stretch')
 
 with tab3:
     st.markdown("### Aggregated Data by Census Tract")
@@ -408,7 +408,7 @@ with tab3:
             'Longitude': '{:.4f}',
             f'{selected_compound} (ppbV)': '{:.3f}'
         }).background_gradient(subset=[f'{selected_compound} (ppbV)'], cmap='RdYlGn_r'),
-        use_container_width=True,
+        width='stretch',
         height=400
     )
 
