@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(conda run -n base python:*)",
+      "Bash(python -c:*)",
+      "Bash(conda run:*)",
+      "Bash(python -m streamlit run:*)",
+      "Bash(where conda:*)",
+      "Bash(C:ProgramDataanaconda3python.exe -m streamlit run app.py --server.headless=true)",
+      "Bash(cmd //c \"cd /d D:\\\\Ayodeji Project Data && C:\\\\ProgramData\\\\anaconda3\\\\python.exe -m streamlit run app.py --server.headless=true\")",
+      "Bash(cmd //c \"timeout /t 15 /nobreak > nul\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 20\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 15\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 12\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 10\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 8\")"
+    ]
+  }
+}

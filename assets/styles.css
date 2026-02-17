@@ -1,0 +1,362 @@
+/* VOC Geospatial Portal - Custom Styles */
+
+/* Import modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Global styles */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.main {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+}
+
+/* Remove default Streamlit padding for cleaner look */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    border-right: 2px solid #667eea;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding-top: 2rem;
+}
+
+/* Sidebar headers */
+section[data-testid="stSidebar"] h3 {
+    color: #2c3e50;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar labels - make ALL text dark and visible */
+section[data-testid="stSidebar"] label {
+    color: #2c3e50 !important;
+    font-weight: 500;
+}
+
+section[data-testid="stSidebar"] p {
+    color: #2c3e50 !important;
+}
+
+section[data-testid="stSidebar"] span {
+    color: #2c3e50 !important;
+}
+
+/* Cards and containers */
+div[data-testid="stPlotlyChart"] {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Metrics styling */
+div[data-testid="stMetric"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.8rem;
+}
+
+div[data-testid="stMetric"] label {
+    color: white !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+div[data-testid="stMetric"] [data-testid="stMetricValue"] {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+div[data-testid="stMetric"] [data-testid="stMetricDelta"] {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Select boxes and inputs */
+div[data-baseweb="select"] {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+div[data-baseweb="select"]:hover {
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+/* Multi-select */
+div[data-baseweb="tag"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+}
+
+/* Sliders */
+div[data-testid="stSlider"] div[role="slider"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+div[data-testid="stSlider"] div[data-baseweb="slider"] div {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Buttons */
+button[kind="primary"],
+button[kind="secondary"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button[kind="primary"]:hover,
+button[kind="secondary"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stDownloadButton button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stDownloadButton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Expander */
+div[data-testid="stExpander"] {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+}
+
+div[data-testid="stExpander"] summary {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+}
+
+div[data-testid="stExpander"] summary:hover {
+    background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Tabs */
+button[data-baseweb="tab"] {
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+}
+
+button[data-baseweb="tab"]:hover {
+    color: #764ba2;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+/* Info, Warning, Error boxes */
+div[data-testid="stAlert"] {
+    border-radius: 8px;
+    border-left: 4px solid;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+div[data-testid="stInfo"] {
+    background: rgba(102, 126, 234, 0.1);
+    border-left-color: #667eea;
+}
+
+div[data-testid="stWarning"] {
+    background: rgba(255, 193, 7, 0.1);
+    border-left-color: #ffc107;
+}
+
+div[data-testid="stError"] {
+    background: rgba(220, 53, 69, 0.1);
+    border-left-color: #dc3545;
+}
+
+div[data-testid="stSuccess"] {
+    background: rgba(40, 167, 69, 0.1);
+    border-left-color: #28a745;
+}
+
+/* Dataframe / Table styling */
+div[data-testid="stDataFrame"] {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    accent-color: #667eea;
+}
+
+label[data-baseweb="checkbox"] {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Spinner */
+div[data-testid="stSpinner"] > div {
+    border-top-color: #667eea !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.element-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Tooltip styling */
+div[role="tooltip"] {
+    background: rgba(44, 62, 80, 0.95) !important;
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+/* Code blocks */
+code {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+pre {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+
+    div[data-testid="stMetric"] {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Hide Streamlit branding (optional) */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Custom header styling for markdown */
+h1, h2, h3 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Links */
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    margin: 2rem 0;
+}
+
+/* Loading state overlay */
+.stSpinner > div {
+    border-top-color: #667eea !important;
+    border-right-color: rgba(102, 126, 234, 0.2) !important;
+    border-bottom-color: rgba(102, 126, 234, 0.2) !important;
+    border-left-color: rgba(102, 126, 234, 0.2) !important;
+}
